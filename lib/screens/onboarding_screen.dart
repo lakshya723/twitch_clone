@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:twitch_clone/screens/signup_screen.dart';
 import '../widgets/custom_button.dart';
+import 'login_screen.dart';
 
 class OnboardingScreen extends StatelessWidget {
   static const routeName = '/onboarding';
@@ -27,14 +28,14 @@ class OnboardingScreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: CustomButton(
                   onTap: () {
-                    
+                    Navigator.pushNamed(context, LoginScreen.routeName);
                   },
                   text: 'Log in',
                 ),
               ),
               CustomButton(
                   onTap: () {
-                   
+                    Navigator.pushNamed(context, SignupScreen.routeName);
                   },
                   text: 'Sign Up'),
             ],
