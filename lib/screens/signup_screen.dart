@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:twitch_clone/resources/auth_methods.dart';
 import 'package:twitch_clone/screens/home_screen.dart';
+import 'package:twitch_clone/widgets/loading_indicator.dart';
 
 import '../widgets/custom_button.dart';
 import '../widgets/custom_textfield.dart';
