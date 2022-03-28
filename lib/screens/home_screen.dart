@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:twitch_clone/screens/feed_screen.dart';
 import 'package:twitch_clone/screens/go_live_screen.dart';
 import 'package:twitch_clone/utils/colours.dart';
 
