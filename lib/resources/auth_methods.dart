@@ -69,4 +69,9 @@ class AuthMethods {
     }
     return res;
   }
+
+   void signOut() async {
+    await _auth.signOut();
+  }
 }
+

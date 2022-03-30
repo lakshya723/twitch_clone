@@ -2,6 +2,7 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:twitch_clone/resources/firestore_method.dart';
+import 'package:twitch_clone/responsive/responsive.dart';
 import 'package:twitch_clone/screens/broadcast_screen.dart';
 import 'package:twitch_clone/utils/colours.dart';
 import 'package:twitch_clone/utils/utils.dart';
@@ -33,7 +34,7 @@ class _GoLiveScreenState extends State<GoLiveScreen> {
       showSnackBar(context, 'Livestream has started successfully!');
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => const BroadcastScreen(
+          builder: (context) => BroadcastScreen(
             isBroadcaster: true,
             channelId: channelId,
           ),
@@ -45,7 +46,7 @@ class _GoLiveScreenState extends State<GoLiveScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-     
+      child: Responsive(
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 18.0),
@@ -141,6 +142,7 @@ class _GoLiveScreenState extends State<GoLiveScreen> {
             ),
           ),
         ),
-      );
+      ),
+    );
   }
 }

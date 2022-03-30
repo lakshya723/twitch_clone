@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:twitch_clone/providers/user_provider.dart';
@@ -14,8 +15,20 @@ import 'utils/colours.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  if (kIsWeb) {
+    await Firebase.initializeApp(
+      options: const FirebaseOptions(
+          apiKey: "AIzaSyA2eWUTuJk2ZeXufySibdVPWwG2iZeWAJE",
+          authDomain: "twitch-clone-5f026.firebaseapp.com",
+          projectId: "twitch-clone-5f026",
+          storageBucket: "twitch-clone-5f026.appspot.com",
+          messagingSenderId: "270949965169",
+          appId: "1:270949965169:web:e14f014e700a4f6a5dead0"),
+    );
+  } else {
+    await Firebase.initializeApp();
+  }
 
-  await Firebase.initializeApp();
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(
       create: (_) => UserProvider(),
@@ -29,7 +42,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-   return MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Twitch Clone Tutorial',
       theme: ThemeData.light().copyWith(

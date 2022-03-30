@@ -6,6 +6,7 @@ import 'package:twitch_clone/models/livestream.dart';
 import 'package:twitch_clone/providers/user_provider.dart';
 import 'package:twitch_clone/resources/storage_methods.dart';
 import 'package:twitch_clone/utils/utils.dart';
+import 'package:uuid/uuid.dart';
 
 class FirestoreMethods {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -61,7 +62,7 @@ class FirestoreMethods {
     final user = Provider.of<UserProvider>(context, listen: false);
 
     try {
-      String commentId = const Uuid.v1();
+      String commentId = const Uuid().v1();
       await _firestore
           .collection('livestream')
           .doc(id)
