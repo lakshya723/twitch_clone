@@ -1,16 +1,23 @@
-# twitch_clone
+# Twitch Clone
 
-A new Flutter project.
+Live Streaming App - Twitch Clone using Flutter, Firebase, Agora & Golang for Android, iOS, Web.
 
-## Getting Started
+## Features:
+- Email & Password Authentication
+- Screensharing
+- Selecting Thumbnail
+- Going Live
+- Joining LiveStream
+- Switching Camera
+- Muting/Unmuting
+- Chatting
+- Cross Platform
+- Responsive UI
+- Token Generation using GO (Create Your API)
+- Deploy Server
+- Deploy Website
 
-This project is a starting point for a Flutter application.
+## Tech Used
+**Server**: Firebase Auth, Firebase Storage, Firebase Firestore
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**Client**: Flutter, Agora , Provider , Golang 
